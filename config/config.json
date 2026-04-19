@@ -1,0 +1,42 @@
+{
+  "default_count": 1,
+  "default_data_volume": "medium",
+  "default_data_order": "random",
+  "default_data_quality": "clean",
+  "default_profile": "custom",
+  "default_show_solution": false,
+  "default_show_full_example": true,
+  "default_hints_step": true,
+  "default_strict_types": true,
+  "checker_entry_mode": "hybrid",
+  "default_seed": null,
+  "default_mode": "solve",
+  "default_topic": "all",
+  "default_domain": "all",
+  "default_stage": "mixed",
+  "default_surprise_me": false,
+  "default_focus_tool": "any",
+  "default_export_format": "none",
+  "default_export_file": null,
+  "default_story_mode": false,
+  "default_session_size": 3,
+  "default_inverse_rate": 0.15,
+  "default_content_pack": "collections-level-1",
+  "default_state_file": "data/history/.collections_tasks_state.pkl",
+  "default_solution_file": "data/history/collections_solutions.py",
+  "ui_window_compact": true,
+  "ui_font_size": 10,
+  "ui_autocheck_on_next": true,
+  "ui_language": "en",
+  "ui_check_timeout_sec": 3,
+  "ui_per_task_minutes": 5,
+  "ui_splitter_sizes": [
+    2,
+    2,
+    2,
+    3
+  ],
+  "ui_default_packs": [
+    "collections-order-extremes"
+  ]
+}

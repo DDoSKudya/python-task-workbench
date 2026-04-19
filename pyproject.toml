@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-task-workbench"
+version = "1.0.0"
+description = "Python Task Workbench — hands-on Python collection exercises with a PyQt6 GUI and CLI."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Python Task Workbench contributors" }]
+dependencies = [
+    "Faker",
+    "PyQt6",
+]
+
+[project.scripts]
+python-task-workbench = "app:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.15",
+    "black>=24",
+    "isort>=5",
+]
+
+[tool.setuptools]
+py-modules = ["app"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "generator*", "messages*", "task_packs*", "ui*"]
+
+[tool.black]
+line-length = 79
+target-version = ["py312"]
+include = "\\.pyi?$"
+extend-exclude = '''
+/(
+    \.venv
+  | data
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 79
+py_version = "312"
+extend_skip = [".venv", "data"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra"]

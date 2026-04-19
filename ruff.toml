@@ -1,0 +1,21 @@
+line-length = 79
+target-version = "py312"
+
+[lint]
+fixable = ["ALL"]
+
+[lint.per-file-ignores]
+# Learner-facing Russian strings (RUF001); controlled ``exec`` (S102).
+"core/checker.py" = ["RUF001", "S102"]
+"core/session.py" = ["RUF001"]
+# Qt ``Protocol`` stubs; ``os.execv`` restart (S606).
+"ui/main_window/session_logic.py" = ["N802", "S606"]
+# Qt overrides :meth:`~QObject.eventFilter` / :meth:`~QWidget.closeEvent`;
+# editor protocol mirrors Qt ``textChanged`` signal name.
+"ui/main_window/window.py" = ["N802", "N815"]
+# Qt widget overrides use camelCase event method names.
+"ui/editor/code_editor.py" = ["N802"]
+"ui/dialogs/history/dialog.py" = ["N802"]
+# Tests: assert/exec (S101/S102), magic literals (PLR2004), bare pytest.raises
+# (PT011), setattr on frozen instances (B010). Previously ``# noqa`` on lines.
+"tests/**" = ["B010", "PLR2004", "PT011", "S101", "S102"]

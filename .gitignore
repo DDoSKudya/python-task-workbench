@@ -1,0 +1,68 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Linters & type checkers
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local / secrets (do not commit)
+.env
+.env.*
+!.env.example
+
+# Logs & scratch dirs
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# --- Python Task Workbench: only README.md is tracked in these trees ---
+# (un-ignore directory, then ignore contents, then track README.md)
+data/history/**
+!data/history/
+!data/history/README.md
+
+content_modules/**
+!content_modules/
+!content_modules/README.md

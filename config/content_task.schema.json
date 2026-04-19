@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://python-task-workbench.local/task.schema.json",
+  "title": "Declarative Task Row",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "task_id",
+    "title",
+    "description",
+    "collections"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_data": {
+      "type": "object"
+    },
+    "expected_result": {},
+    "collections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "pattern": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difficulty_hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "common_pitfalls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "real_world_analogy": {
+      "type": "string"
+    },
+    "estimated_complexity": {
+      "type": "string"
+    },
+    "optimal_tool": {
+      "type": "string"
+    },
+    "builder": {
+      "type": "string",
+      "description": "Optional function name from module.py(factory) -> payload"
+    }
+  }
+}

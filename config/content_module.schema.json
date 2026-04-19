@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://python-task-workbench.local/module.schema.json",
+  "title": "Content Module Manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "version", "schema_version"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique content module id"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display label in UI"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Module semantic version"
+    },
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Manifest schema version supported by engine"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Disable module without deleting files"
+    },
+    "task_files": {
+      "type": "array",
+      "description": "Optional declarative task files relative to module root",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
