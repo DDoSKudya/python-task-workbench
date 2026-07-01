@@ -1,6 +1,6 @@
 # Pinned runtime deps (aligned with ``[project.dependencies]`` in pyproject.toml).
 # Install: ``pip install -r requirements.txt`` or ``pip install .``
-Faker==40.13.0
+Faker==40.28.0
 PyQt6==6.11.0
 
 # Test runner (see ``[project.optional-dependencies].dev``)
