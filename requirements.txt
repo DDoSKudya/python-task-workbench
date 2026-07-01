@@ -4,4 +4,4 @@ Faker==40.13.0
 PyQt6==6.11.0
 
 # Test runner (see ``[project.optional-dependencies].dev``)
-pytest==9.0.3
+pytest==9.1.1
